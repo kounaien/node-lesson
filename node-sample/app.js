@@ -114,7 +114,7 @@
 // })
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
 // fs.mkdir('tutorial', (err)=>{
 //     if(err)
@@ -153,18 +153,58 @@ const fs = require('fs');
 //     }
 // });
 
-fs.readdir('example', (err, files)=>{
-    if(err)
-        console.log(err);
-    else{
-        for(let file of files){
-            fs.unlink('./example/' + file, (err)=>{
-                if(err)
-                    console.log(err);
-                else{
-                    console.log('successfully deleted file')
-                }
-            })
-        }
-    }
-})
+// fs.readdir('example', (err, files)=>{
+//     if(err)
+//         console.log(err);
+//     else{
+//         for(let file of files){
+//             fs.unlink('./example/' + file, (err)=>{
+//                 if(err)
+//                     console.log(err);
+//                 else{
+//                     console.log('successfully deleted file')
+//                 }
+//             })
+//         }
+//     }
+// })
+
+// const fs = require('fs');
+// const zlib = require('zlib');
+// const gunzip = zlib.createGunzip();
+// const readStream = fs.createReadStream('./example2.txt.gz', );
+// const writeStream = fs.createWriteStream('example2.txt');        
+// readStream.pipe(gunzip).pipe(writeStream);       
+// readStream.on('data', (chunk)=> {
+//     writeStream.write(chunk);
+// });
+
+// fs.readFile('./example.txt', 'utf-8', (err, file)=>{
+//     if(err)
+//         console.log(err);
+//     else{
+//         console.log(file);
+//     }
+// })
+
+// const http = require('http');
+// const server = http.createServer((req, res)=>{
+//     if(res.url === '/'){
+//         res.write('hello world from nodejs');
+//         res.end();
+//     }
+//     else{
+//         res.write('using some other domain');
+//         res.end();
+//     }
+// });
+
+// server.listen('3000');
+
+
+const http = require('http');
+const fs = require('fs');
+http.createServer((req, res)=>{
+    const readStream = fs.createReadStream('./static/index.html');
+    res.writeHead(200, {'Content-type': 'text/html'});
+}).listen(3000);
