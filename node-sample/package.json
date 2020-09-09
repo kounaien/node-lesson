@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kounaien",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20" //majore, minor, patch
+                                      // conpatible
+                                      //^ 4.x.x.
+                                      //~ 4.17.x
+  }
 }
