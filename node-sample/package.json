@@ -1,17 +1,12 @@
 {
-  "name": "sample",
+  "name": "node-sample",
   "version": "1.0.0",
-  "description": "tutorial",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "kounaien",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.20" //majore, minor, patch
-                                      // conpatible
-                                      //^ 4.x.x.
-                                      //~ 4.17.x
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
