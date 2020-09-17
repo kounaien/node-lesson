@@ -20,7 +20,7 @@
                     url : '/',
                     type: 'post',
                     contentType : 'application/json',
-                    data : JSON.stringify($("form").serializeArray());
+                    data : JSON.stringify($("form").serializeArray()),
                     success : (response)=>{
                         cnosole.log('successfully got response');
                         cnosole.log('response');
